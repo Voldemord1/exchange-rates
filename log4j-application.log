@@ -1,0 +1,110 @@
+2019-08-23 22:27:54.453  INFO 5616 --- [main] c.e.rates.ExchangeRatesApplication       : Starting ExchangeRatesApplication on Unknown with PID 5616 (C:\Users\User\IdeaProjects\exchange-rates\target\classes started by User in C:\Users\User\IdeaProjects\exchange-rates)
+2019-08-23 22:27:54.460  INFO 5616 --- [main] c.e.rates.ExchangeRatesApplication       : No active profile set, falling back to default profiles: default
+2019-08-23 22:27:56.204  INFO 5616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-23 22:27:56.338  INFO 5616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121ms. Found 3 repository interfaces.
+2019-08-23 22:27:56.958  INFO 5616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8af86c2a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 22:27:57.304  INFO 5616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-08-23 22:27:57.336  INFO 5616 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-23 22:27:57.336  INFO 5616 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-23 22:27:57.689  INFO 5616 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-23 22:27:57.695  INFO 5616 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-23 22:27:57.696  INFO 5616 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3055 ms
+2019-08-23 22:27:57.879  INFO 5616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-23 22:27:58.022  INFO 5616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-23 22:27:58.229  INFO 5616 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-23 22:27:58.308  INFO 5616 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-23 22:27:58.310  INFO 5616 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-08-23 22:27:58.448  INFO 5616 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-23 22:27:58.619  INFO 5616 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-23 22:27:59.434  INFO 5616 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@79627d27'
+2019-08-23 22:27:59.437  INFO 5616 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-23 22:28:00.225  INFO 5616 --- [main] c.e.rates.service.impl.UserServiceImpl   : User(id=1, email=admin@gmail.com, password=$2a$10$cuu1kwtZQUTI5uOuYQb.8.BEIx2f3KnprqdtsIOfsZdzOUpNJYtg6, role=ROLE_ADMIN) saved in DB
+2019-08-23 22:28:00.359  INFO 5616 --- [main] c.e.rates.service.impl.UserServiceImpl   : User(id=2, email=user@gmail.com, password=$2a$10$gXhszAHGm3cAYUSgfgLxyutKSBj94wVQvYrc33.5Pzru3/pTzRwxS, role=ROLE_USER) saved in DB
+2019-08-23 22:28:00.371  INFO 5616 --- [main] c.e.rates.service.impl.UserServiceImpl   : Currency(id=1, mnemonics=USD, code=840, description=Dollar USA) saved in DB
+2019-08-23 22:28:00.375  INFO 5616 --- [main] c.e.rates.service.impl.UserServiceImpl   : Currency(id=2, mnemonics=EUR, code=978, description=Euro) saved in DB
+2019-08-23 22:28:00.379  INFO 5616 --- [main] c.e.rates.service.impl.UserServiceImpl   : Currency(id=3, mnemonics=UAH, code=980, description=Ukrainian hryvnia) saved in DB
+2019-08-23 22:28:01.457  INFO 5616 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-08-23 22:28:01.581  INFO 5616 --- [main] c.e.r.service.impl.JournalServiceImpl    : Journal(id=1, date=1566528007, currencyCodeA=840, currencyCodeB=980, currency=Currency(id=1, mnemonics=USD, code=840, description=Dollar USA), rateBuy=24.961, rateSell=25.2417) save in DB
+2019-08-23 22:28:01.589  INFO 5616 --- [main] c.e.r.service.impl.JournalServiceImpl    : Journal(id=2, date=1566546007, currencyCodeA=978, currencyCodeB=980, currency=Currency(id=2, mnemonics=EUR, code=978, description=Euro), rateBuy=27.561, rateSell=28.2374) save in DB
+2019-08-23 22:28:01.630  WARN 5616 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-23 22:28:02.259  INFO 5616 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7417ef4f, org.springframework.security.web.context.SecurityContextPersistenceFilter@23469199, org.springframework.security.web.header.HeaderWriterFilter@68f776ee, org.springframework.security.web.authentication.logout.LogoutFilter@5341e71a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2b1a901d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3f1158ee, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5c0e2ec, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5611bba, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2bc0b8c8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fa8bebb, org.springframework.security.web.session.SessionManagementFilter@8af1c49, org.springframework.security.web.access.ExceptionTranslationFilter@3e2d8623, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@517fbf62]
+2019-08-23 22:28:02.532  INFO 5616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-23 22:28:02.535  INFO 5616 --- [main] c.e.rates.ExchangeRatesApplication       : Started ExchangeRatesApplication in 8.917 seconds (JVM running for 9.909)
+2019-08-23 22:31:51.852  INFO 2312 --- [main] c.e.rates.ExchangeRatesApplication       : Starting ExchangeRatesApplication on Unknown with PID 2312 (C:\Users\User\IdeaProjects\exchange-rates\target\classes started by User in C:\Users\User\IdeaProjects\exchange-rates)
+2019-08-23 22:31:51.858  INFO 2312 --- [main] c.e.rates.ExchangeRatesApplication       : No active profile set, falling back to default profiles: default
+2019-08-23 22:31:54.055  INFO 2312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-23 22:31:54.190  INFO 2312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122ms. Found 3 repository interfaces.
+2019-08-23 22:31:54.779  INFO 2312 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3da8496] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 22:31:55.118  INFO 2312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-08-23 22:31:55.150  INFO 2312 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-23 22:31:55.150  INFO 2312 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-23 22:31:55.566  INFO 2312 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-23 22:31:55.573  INFO 2312 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-23 22:31:55.573  INFO 2312 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3612 ms
+2019-08-23 22:31:55.761  INFO 2312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-23 22:31:55.910  INFO 2312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-23 22:31:56.128  INFO 2312 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-23 22:31:56.212  INFO 2312 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-23 22:31:56.214  INFO 2312 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-08-23 22:31:56.380  INFO 2312 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-23 22:31:56.522  INFO 2312 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-23 22:31:57.324  INFO 2312 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@267f9765'
+2019-08-23 22:31:57.327  INFO 2312 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-23 22:31:58.154  INFO 2312 --- [main] c.e.rates.service.impl.UserServiceImpl   : User(id=1, email=admin@gmail.com, password=$2a$10$RN93GGHfJ2TQqIOdh0W6beTg4qydIJU4LwKYbtGUPS526MrpZnGOy, role=ROLE_ADMIN) saved in DB
+2019-08-23 22:31:58.289  INFO 2312 --- [main] c.e.rates.service.impl.UserServiceImpl   : User(id=2, email=user@gmail.com, password=$2a$10$9SJwbd3BbhX2ur8t/DImG.bu1.UbrJF96yju8.zzSvB1mBf4efH/a, role=ROLE_USER) saved in DB
+2019-08-23 22:31:58.300  INFO 2312 --- [main] c.e.rates.service.impl.UserServiceImpl   : Currency(id=1, mnemonics=USD, code=840, description=Dollar USA) saved in DB
+2019-08-23 22:31:58.305  INFO 2312 --- [main] c.e.rates.service.impl.UserServiceImpl   : Currency(id=2, mnemonics=EUR, code=978, description=Euro) saved in DB
+2019-08-23 22:31:58.309  INFO 2312 --- [main] c.e.rates.service.impl.UserServiceImpl   : Currency(id=3, mnemonics=UAH, code=980, description=Ukrainian hryvnia) saved in DB
+2019-08-23 22:31:59.528  INFO 2312 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-08-23 22:31:59.646  INFO 2312 --- [main] c.e.r.service.impl.JournalServiceImpl    : Journal(id=1, date=1566528007, currencyCodeA=840, currencyCodeB=980, currency=Currency(id=1, mnemonics=USD, code=840, description=Dollar USA), rateBuy=24.961, rateSell=25.2417) save in DB
+2019-08-23 22:31:59.654  INFO 2312 --- [main] c.e.r.service.impl.JournalServiceImpl    : Journal(id=2, date=1566546007, currencyCodeA=978, currencyCodeB=980, currency=Currency(id=2, mnemonics=EUR, code=978, description=Euro), rateBuy=27.561, rateSell=28.2374) save in DB
+2019-08-23 22:31:59.702  WARN 2312 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-23 22:32:00.455  INFO 2312 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@365bfc5f, org.springframework.security.web.context.SecurityContextPersistenceFilter@49122853, org.springframework.security.web.header.HeaderWriterFilter@31f7eb8, org.springframework.security.web.authentication.logout.LogoutFilter@1de73d37, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4a4b288a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@305aaedf, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1a7e799e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d6b42cf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b94c789, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37a3ec27, org.springframework.security.web.session.SessionManagementFilter@4a833595, org.springframework.security.web.access.ExceptionTranslationFilter@ff1f465, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@580c17a0]
+2019-08-23 22:32:00.735  INFO 2312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-23 22:32:00.738  INFO 2312 --- [main] c.e.rates.ExchangeRatesApplication       : Started ExchangeRatesApplication in 9.671 seconds (JVM running for 10.657)
+2019-08-23 22:32:14.664  INFO 2312 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-23 22:32:14.664  INFO 2312 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-23 22:32:14.675  INFO 2312 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-08-23 22:34:42.246  INFO 1508 --- [main] c.e.rates.ExchangeRatesApplication       : Starting ExchangeRatesApplication on Unknown with PID 1508 (C:\Users\User\IdeaProjects\exchange-rates\target\classes started by User in C:\Users\User\IdeaProjects\exchange-rates)
+2019-08-23 22:34:42.251  INFO 1508 --- [main] c.e.rates.ExchangeRatesApplication       : No active profile set, falling back to default profiles: default
+2019-08-23 22:34:44.163  INFO 1508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-23 22:34:44.278  INFO 1508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103ms. Found 3 repository interfaces.
+2019-08-23 22:34:44.726  INFO 1508 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dcb64ab4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 22:34:45.205  INFO 1508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-08-23 22:34:45.261  INFO 1508 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-23 22:34:45.262  INFO 1508 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-23 22:34:45.760  INFO 1508 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-23 22:34:45.766  INFO 1508 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-23 22:34:45.767  INFO 1508 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3383 ms
+2019-08-23 22:34:45.964  INFO 1508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-23 22:34:46.121  INFO 1508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-23 22:34:46.336  INFO 1508 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-23 22:34:46.427  INFO 1508 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-23 22:34:46.429  INFO 1508 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-08-23 22:34:46.579  INFO 1508 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-23 22:34:46.731  INFO 1508 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-23 22:34:47.629  INFO 1508 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@71560f51'
+2019-08-23 22:34:47.633  INFO 1508 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-23 22:34:48.519  INFO 1508 --- [main] c.e.rates.service.impl.UserServiceImpl   : User(id=1, email=admin@gmail.com, password=$2a$10$s6JlysY6kf.KxvATYiTXWuDgkrGHcBv4JDFm9i8rfOloUZDh74eWG, role=ROLE_ADMIN) saved in DB
+2019-08-23 22:34:48.657  INFO 1508 --- [main] c.e.rates.service.impl.UserServiceImpl   : User(id=2, email=user@gmail.com, password=$2a$10$cAG4ONvZekqm3HG9sstPdeNLff/GzC4KmcghjDsyeOzPYWe5LvY6u, role=ROLE_USER) saved in DB
+2019-08-23 22:34:48.669  INFO 1508 --- [main] c.e.rates.service.impl.UserServiceImpl   : Currency(id=1, mnemonics=USD, code=840, description=Dollar USA) saved in DB
+2019-08-23 22:34:48.674  INFO 1508 --- [main] c.e.rates.service.impl.UserServiceImpl   : Currency(id=2, mnemonics=EUR, code=978, description=Euro) saved in DB
+2019-08-23 22:34:48.677  INFO 1508 --- [main] c.e.rates.service.impl.UserServiceImpl   : Currency(id=3, mnemonics=UAH, code=980, description=Ukrainian hryvnia) saved in DB
+2019-08-23 22:34:49.765  INFO 1508 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-08-23 22:34:49.891  INFO 1508 --- [main] c.e.r.service.impl.JournalServiceImpl    : Journal(id=1, date=1566528007, currencyCodeA=840, currencyCodeB=980, currency=Currency(id=1, mnemonics=USD, code=840, description=Dollar USA), rateBuy=24.961, rateSell=25.2417) save in DB
+2019-08-23 22:34:49.899  INFO 1508 --- [main] c.e.r.service.impl.JournalServiceImpl    : Journal(id=2, date=1566546007, currencyCodeA=978, currencyCodeB=980, currency=Currency(id=2, mnemonics=EUR, code=978, description=Euro), rateBuy=27.561, rateSell=28.2374) save in DB
+2019-08-23 22:34:49.942  WARN 1508 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-23 22:34:50.597  INFO 1508 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5611bba, org.springframework.security.web.context.SecurityContextPersistenceFilter@5871a482, org.springframework.security.web.header.HeaderWriterFilter@24a3d414, org.springframework.security.web.authentication.logout.LogoutFilter@4a833595, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@72715e61, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2a5c6b76, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5ba184fc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@296676c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@70884875, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4cfc0c48, org.springframework.security.web.session.SessionManagementFilter@2bdcfcf, org.springframework.security.web.access.ExceptionTranslationFilter@6b8bdcc6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5403431a]
+2019-08-23 22:34:50.897  INFO 1508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-23 22:34:50.900  INFO 1508 --- [main] c.e.rates.ExchangeRatesApplication       : Started ExchangeRatesApplication in 9.311 seconds (JVM running for 10.48)
+2019-08-23 22:34:58.121  INFO 1508 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-23 22:34:58.122  INFO 1508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-23 22:34:58.137  INFO 1508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2019-08-23 22:35:37.631  WARN 1508 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /currency
+2019-08-23 22:36:10.366  WARN 1508 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /user/products
